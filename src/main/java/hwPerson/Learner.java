@@ -1,10 +1,9 @@
 package hwPerson;
 
 public interface Learner {
-     static void learn(double numberOfHours){
-    return;
-     }
-     default double getTotalStudyTime(){
+     void learn(double numberOfHours);
+
+    default double getTotalStudyTime(){
          return getTotalStudyTime();
      }
 }

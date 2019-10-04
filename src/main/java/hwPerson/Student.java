@@ -1,6 +1,6 @@
 package hwPerson;
 
-public class Student extends Person implements Learner {
+public abstract class Student extends Person implements Learner {
     private double totalStudyTime;
 
 
