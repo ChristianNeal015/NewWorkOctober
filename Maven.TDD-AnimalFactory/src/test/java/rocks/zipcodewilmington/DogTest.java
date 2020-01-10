@@ -14,6 +14,7 @@ import java.util.Date;
  */
 public class DogTest {
     // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
+    @Test
     public void setName(){
         Dog dog = new Dog(null, new Date(), null);
         String expected = "Doof";

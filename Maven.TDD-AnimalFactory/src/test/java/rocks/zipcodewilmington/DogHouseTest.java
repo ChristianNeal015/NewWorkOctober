@@ -32,8 +32,32 @@ public class DogHouseTest {
         Assert.assertNull(actual);
     }
     // TODO - Create tests for `void remove(Dog dog)`
+    @Test
+    public void removeTest2(){
+        Dog dog = new Dog(null, null, 6);
+        DogHouse.add(dog);
+        DogHouse.remove(dog);
+        Dog actual = DogHouse.getDogById(6);
+        Assert.assertNull(actual);
+    }
     // TODO - Create tests for `Dog getDogById(Integer id)`
+    @Test
+    public void getDogByIdTest(){
+        Dog dog = new Dog(null, null, 7);
+        DogHouse.add(dog);
+        Dog actual = DogHouse.getDogById(7);
+        Assert.assertEquals(dog, actual);
+    }
     // TODO - Create tests for `Integer getNumberOfDogs()`
+    @Test
+    public void getNumberOfDogTest(){
+        Dog dog = new Dog(null,null,null);
+        int getNumOfDogs = DogHouse.getNumberOfDogs();
+        DogHouse.add(dog);
+        int expected = getNumOfDogs + 1;
+        int actual = DogHouse.getNumberOfDogs();
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void testGetNumberOfDogs() {
